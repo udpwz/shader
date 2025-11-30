@@ -20,9 +20,10 @@ out vec4 FragColor;
 void main() {
   vec2 st = gl_FragCoord.xy / u_resolution;
 
-  float y = step(0.5, st.x);
+  // float y = step(0.5, st.x);
   // float y = pow(st.x, 0.5);
   // float y = smoothstep(0.1,0.9,st.x);
+  float y = sin(PI * st.x + u_time);
 
   vec3 color = vec3(y);
 
